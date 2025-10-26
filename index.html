@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eureka Studio</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
     body {
       background-color: #0d0d0d;
       color: #fff;
@@ -18,30 +17,42 @@
       margin: 0;
       text-align: center;
     }
+
+    img {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+
     h1 {
       font-size: 3rem;
       letter-spacing: 3px;
       font-weight: 600;
       margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff7f00, #ff0099, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
     p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      max-width: 300px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 400px;
     }
+
     .sparkle {
-      color: #ffd700;
+      font-size: 1.4rem;
       animation: glow 1.5s ease-in-out infinite alternate;
     }
+
     @keyframes glow {
-      from { text-shadow: 0 0 5px #ffd700; }
-      to { text-shadow: 0 0 20px #ffd700; }
+      from { text-shadow: 0 0 8px #ff7f00; }
+      to { text-shadow: 0 0 20px #ff0099; }
     }
   </style>
 </head>
 <body>
+<img src="logo.png" alt="Eureka Studio Logo">
   <h1><span class="sparkle">✨</span> Eureka Studio <span class="sparkle">✨</span></h1>
-  <p>We craft stories through design, art & emotion.  
-  <br>Something creative is coming soon.</p>
+  <p>Tasarım, sanat ve duyguyla hikayeler yaratıyoruz.<br>Something creative is coming soon.</p>
 </body>
 </html>
