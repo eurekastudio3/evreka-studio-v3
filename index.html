@@ -1,112 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eureka Studio</title>
+  <meta name="description" content="Eureka Studio — Designs that inspire. Creations that glow." />
+
   <style>
+    /* ---- Reset / Base ---- */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #333;
-      font-family: "Poppins", sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                   Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: #1f2937;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---- Layout ---- */
+    .wrap {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 44px 20px 28px;
+    }
+
+    .card {
+      width: min(960px, 92vw);
       text-align: center;
-      padding-top: 80px; /* logo ile üst kenar arasına nefes alanı */
     }
 
+    /* ---- Logo ---- */
     .logo {
-      width: min(260px, 60vw);
-      margin: 0 auto 28px;
+      width: clamp(220px, 55vw, 360px);
+      max-width: 100%;
       display: block;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+      margin: 0 auto 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      background: #fff;
     }
 
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #ff7b00, #009dff);
+    /* ---- Başlık + Gradient ---- */
+    .title {
+      font-size: clamp(36px, 7vw, 64px);
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin: 0 0 14px;
+      line-height: 1.08;
+      background: linear-gradient(90deg, #ff7b00 0%, #9aa5a6 45%, #1e90ff 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #444;
-      margin-bottom: 36px;
+    /* ---- Tagline ---- */
+    .tagline {
+      font-size: clamp(16px, 2.8vw, 20px);
+      color: #4b5563;
+      margin: 0 0 22px;
     }
 
+    /* ---- Sosyal Linkler ---- */
     .socials {
-      margin-top: 20px;
+      margin-top: 8px;
       display: flex;
-      gap: 30px;
+      gap: clamp(14px, 4vw, 28px);
       justify-content: center;
       flex-wrap: wrap;
     }
 
     .socials a {
       position: relative;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-      background: linear-gradient(90deg, #ff7b00, #009dff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: all 0.3s ease;
-      opacity: 0.9;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      padding: 8px 10px;
+      font-size: clamp(15px, 2.6vw, 18px);
+      font-weight: 600;
+      background: linear-gradient(90deg, #ff7b00, #1e90ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: .95;
+      transition: transform .18s ease, opacity .18s ease, filter .18s ease;
     }
 
     .socials a::after {
       content: "";
       position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
+      left: 0; right: 0; bottom: 2px;
       height: 2px;
-      background: linear-gradient(90deg, #ff7b00, #009dff);
-      transition: width 0.4s ease;
+      margin: 0 auto;
+      width: 0%;
+      background: linear-gradient(90deg, #ff7b00, #1e90ff);
+      transition: width .25s ease;
       border-radius: 2px;
     }
 
     .socials a:hover {
-      transform: scale(1.05);
+      transform: translateY(-1px);
       opacity: 1;
-      filter: brightness(1.2);
+      filter: brightness(1.08);
     }
 
     .socials a:hover::after {
       width: 100%;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #777;
+    .icon { font-size: 1.05em; line-height: 1; }
+
+    /* ---- Telif ---- */
+    .copy {
+      margin-top: 26px;
+      font-size: 12.5px;
+      color: #9aa4b2;
     }
   </style>
 </head>
+
 <body>
-  <img src="logo.png" alt="Eureka Studio Logo" class="logo" />
-  <h1>EUREKA STUDIO</h1>
-  <p>Designs that inspire. Creations that glow.</p>
+  <main class="wrap">
+    <section class="card" aria-label="Eureka Studio">
+      <!-- LOGO: dosya ismi logo.png.PNG -->
+      <img src="logo.png.PNG" alt="Eureka Studio Logo" class="logo" loading="eager" />
 
-  <div class="socials">
-    <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
-    <a href="https://behance.net/" target="_blank">🎨 Behance</a>
-    <a href="mailto:info@evrekastudio.com">✉️ Email</a>
-  </div>
+      <h1 class="title">EUREKA STUDIO</h1>
+      <p class="tagline">Designs that inspire. Creations that glow.</p>
 
-  <footer>© 2025 Eureka Studio. All rights reserved.</footer>
+      <nav class="socials" aria-label="Sosyal bağlantılar">
+        <a href="https://instagram.com/" target="_blank" rel="noopener">
+          <span class="icon">📷</span> Instagram
+        </a>
+        <a href="https://behance.net/" target="_blank" rel="noopener">
+          <span class="icon">🎨</span> Behance
+        </a>
+        <a href="mailto:info@evrekastudio.com">
+          <span class="icon">✉️</span> Email
+        </a>
+      </nav>
+
+      <p class="copy">© 2025 Eureka Studio. All rights reserved.</p>
+    </section>
+  </main>
 </body>
 </html>
