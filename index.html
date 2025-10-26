@@ -3,106 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eureka Studio</title>
+  <title>Eureka Studio — Epoksi & Mum Tasarımları</title>
+  <meta name="description" content="Sanat, tasarım ve yaratıcılığın buluştuğu yer. Epoksi ve mum tasarımlarında benzersiz dokunuşlar.">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- Zarif el yazısı + temiz gövde fontu -->
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eureka Studio" />
+  <meta property="og:description" content="Sanat, tasarım ve yaratıcılığın buluştuğu yer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="eureka-logo.png.PNG" />
 
-  <style>
-    :root{
-      --orange:#f6861f;     /* Hepsiburada'ya yakın sıcak turuncu */
-      --blue:#1e88ff;       /* canlı mavi */
-      --ink:#444;
-    }
+  <!-- Fontlar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Başlık/Metin: Poppins | İmza tadında yazılar için: Great Vibes (gerektiğinde kullanırız) -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
-      color:var(--ink);
-      background:#fff;
-    }
-
-    .wrap{
-      max-width:980px;
-      margin-inline:auto;
-      padding:56px 20px 40px;
-      text-align:center;
-    }
-
-    /* LOGO (şeffaf PNG) */
-    .logo{
-      width:min(520px, 90vw);
-      margin:18px auto 26px;
-      display:block;
-      filter: drop-shadow(0 8px 26px rgba(0,0,0,.12));
-      border-radius:20px;              /* köşe parlamalarını yumuşatır; şeffaf PNG’de sorun yaratmaz */
-    }
-
-    /* Başlık – el yazısı ve renk bölmeli */
-    h1{
-      margin:0 0 10px;
-      font-family:Allura, cursive;
-      font-size: clamp(44px, 7vw, 86px);
-      line-height:1;
-      font-weight:400;
-      letter-spacing:.5px;
-    }
-    .brand-eu-st{ color:var(--orange); }  /* “Eureka St” -> turuncu */
-    .brand-udio{ color:var(--blue); }     /* “udio” -> mavi   */
-
-    .tagline{
-      margin:10px auto 26px;
-      max-width:780px;
-      font-size: clamp(16px, 2.6vw, 22px);
-      line-height:1.6;
-      color:#6b6b6b;
-    }
-
-    /* Sosyal linkler */
-    .socials{
-      margin:22px 0 34px;
-      display:flex; gap:26px;
-      justify-content:center; flex-wrap:wrap;
-    }
-    .socials a{
-      display:inline-flex; align-items:center; gap:8px;
-      text-decoration:none; font-weight:600;
-      color:var(--ink);
-      transition:.25s ease;
-    }
-    .socials a:hover{ transform:translateY(-2px); }
-    .ig{ color:var(--orange); }
-    .be{ color:#b7772a; }
-    .em{ color:#d47a1b; }
-
-    footer{
-      margin-top:10px;
-      font-size:14px; color:#9a9a9a;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="wrap">
-    <!-- ŞEFFAF LOGO: dosya adı tam olarak eureka-logo.png.PNG olmalı -->
-    <img class="logo" src="eureka-logo.png.PNG" alt="Eureka Studio Logosu" />
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-eureka">Eureka</span>
+        <span class="brand-studio">Studio</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç/kapat">☰</button>
+      <nav class="links" id="navLinks">
+        <a href="#hakkinda">Hakkında</a>
+        <a href="#galeri">Çalışmalar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
 
-    <h1>
-      <span class="brand-eu-st">Eureka St</span><span class="brand-udio">udio</span>
-    </h1>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <img
+          src="eureka-logo.png.PNG"
+          alt="Eureka Studio Logo"
+          class="hero-logo"
+          width="560"
+          height="560"
+          loading="eager"
+        />
+        <h1 class="title">
+          <span class="brand-eureka">Eureka</span>
+          <span class="brand-studio">Studio</span>
+        </h1>
+        <p class="lead">
+          Sanat, tasarım ve yaratıcılığın buluştuğu yer. Epoksi ve mum tasarımlarında benzersiz dokunuşlar.
+        </p>
 
-    <p class="tagline">
-      Sanat, tasarım ve yaratıcılığın buluştuğu yer. Epoksi ve mum tasarımlarında benzersiz dokunuşlar.
-    </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#galeri">Çalışmalara Bak</a>
+          <a class="btn ghost" href="#iletisim">İletişime Geç</a>
+        </div>
+      </div>
+    </section>
 
-    <nav class="socials">
-      <a class="ig" href="https://instagram.com/" target="_blank" rel="noopener">📸 Instagram</a>
-      <a class="be" href="https://behance.net/"  target="_blank" rel="noopener">🎨 Behance</a>
-      <a class="em" href="mailto:info@eurekastudio.com">✉️ Email</a>
-    </nav>
+    <!-- HAKKINDA -->
+    <section id="hakkinda" class="section">
+      <div class="container">
+        <h2>Hakkında</h2>
+        <p class="muted">
+          Her parçamız; renk, doku ve ışığın dansından ilham alır. Sıcak turuncular ile derin mavilerin
+          buluştuğu dünyamıza hoş geldin.
+        </p>
+        <ul class="features">
+          <li>El yapımı ve sınırlı üretim</li>
+          <li>Özenle seçilmiş pigment & esanslar</li>
+          <li>Kişiye özel tasarım seçenekleri</li>
+        </ul>
+      </div>
+    </section>
 
-    <footer>© 2025 Eureka Studio. Tüm hakları saklıdır.</footer>
+    <!-- GALERİ / PORTFOLYO -->
+    <section id="galeri" class="section alt">
+      <div class="container">
+        <h2>Çalışmalar</h2>
+        <div class="grid">
+          <!-- İstersen buradaki görselleri repo’ya ekleyip src’leri değiştir -->
+          <figure class="card">
+            <div class="ph"></div>
+            <figcaption>Epoksi Tablo</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="ph"></div>
+            <figcaption>Renk Geçişli Mum</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="ph"></div>
+            <figcaption>Dekoratif Set</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="ph"></div>
+            <figcaption>Özel Sipariş</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- İLETİŞİM / SOSYAL -->
+    <section id="iletisim" class="section">
+      <div class="container">
+        <h2>İletişim</h2>
+        <p class="muted">Soruların ve siparişlerin için:</p>
+        <div class="socials">
+          <a href="https://instagram.com/" target="_blank" rel="noopener">📸 Instagram</a>
+          <a href="https://behance.net/" target="_blank" rel="noopener">🎨 Behance</a>
+          <a href="mailto:info@eurekastudio.com">✉️ Email</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Eureka Studio. Tüm hakları saklıdır.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
