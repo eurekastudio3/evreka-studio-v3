@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eureka Studio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
     body {
       background-color: #0d0d0d;
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -19,16 +20,28 @@
     }
     h1 {
       font-size: 3rem;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
     p {
       font-size: 1.2rem;
       opacity: 0.8;
+      max-width: 300px;
+    }
+    .sparkle {
+      color: #ffd700;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ffd700; }
+      to { text-shadow: 0 0 20px #ffd700; }
     }
   </style>
 </head>
 <body>
-  <h1>✨ Eureka Studio</h1>
-  <p>Under construction — something creative is coming soon.</p>
+  <h1><span class="sparkle">✨</span> Eureka Studio <span class="sparkle">✨</span></h1>
+  <p>We craft stories through design, art & emotion.  
+  <br>Something creative is coming soon.</p>
 </body>
 </html>
