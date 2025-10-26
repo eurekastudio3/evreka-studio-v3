@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eureka Studio</title>
-  <meta name="description" content="Eureka Studio — Designs that inspire. Creations that glow." />
-
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
     body {
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: #1f2937;
-      background: #ffffff;
-      display: grid;
-      place-items: center;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    .container {
-      padding: 48px 20px;
-      max-width: 800px;
-    }
-
-    /* Logo: arka plan veya gölge yok */
     .logo {
-      width: clamp(220px, 50vw, 340px);
-      display: block;
-      margin: 0 auto 32px;
+      width: 240px;
+      height: auto;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
     }
 
-    .title {
-      font-size: clamp(44px, 8vw, 72px);
-      font-weight: 800;
-      background: linear-gradient(90deg, #ff7b00 0%, #9aa5a6 45%, #1e90ff 100%);
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      background: linear-gradient(90deg, #ff7b00, #009dff);
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 18px;
-      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
-    .tagline {
-      font-size: clamp(18px, 3vw, 22px);
-      color: #4b5563;
-      margin-bottom: 28px;
+    p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 500px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
     }
 
     .socials {
+      margin-top: 20px;
       display: flex;
+      gap: 25px;
       justify-content: center;
-      gap: 24px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
     }
 
     .socials a {
-      font-size: clamp(17px, 3vw, 19px);
-      font-weight: 600;
-      background: linear-gradient(90deg, #ff7b00, #1e90ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
       text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: linear-gradient(90deg, #ff7b00, #009dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       position: relative;
+      transition: all 0.3s ease;
     }
 
     .socials a::after {
       content: "";
       position: absolute;
-      bottom: -3px;
+      bottom: -4px;
       left: 0;
       width: 0%;
       height: 2px;
-      background: linear-gradient(90deg, #ff7b00, #1e90ff);
-      transition: width 0.3s ease;
+      background: linear-gradient(90deg, #ff7b00, #009dff);
+      transition: width 0.4s ease;
+      border-radius: 2px;
     }
 
     .socials a:hover::after {
       width: 100%;
     }
 
-    .icon { font-size: 1.1em; }
-
-    .copy {
-      margin-top: 26px;
-      font-size: 13px;
-      color: #9aa4b2;
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.6;
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <img src="logo.png.PNG" alt="Eureka Studio Logo" class="logo" loading="eager" />
-    <h1 class="title">EUREKA STUDIO</h1>
-    <p class="tagline">Designs that inspire. Creations that glow.</p>
 
-    <div class="socials">
-      <a href="https://instagram.com/" target="_blank"><span class="icon">📸</span> Instagram</a>
-      <a href="https://behance.net/" target="_blank"><span class="icon">🎨</span> Behance</a>
-      <a href="mailto:info@evrekastudio.com"><span class="icon">✉️</span> Email</a>
-    </div>
+  <img src="logo.png.PNG" alt="Eureka Studio Logo" class="logo">
 
-    <p class="copy">© 2025 Eureka Studio. All rights reserved.</p>
+  <h1>Eureka Studio</h1>
+  <p>Sanat, tasarım ve yaratıcılığın buluştuğu yer.  
+     Epoksi ve mum tasarımlarında benzersiz dokunuşlar.</p>
+
+  <div class="socials">
+    <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+    <a href="https://behance.net/" target="_blank">🎨 Behance</a>
+    <a href="mailto:info@eurekastudio.com">✉️ Email</a>
   </div>
+
+  <footer>© 2025 Eureka Studio • Tüm hakları saklıdır</footer>
+
 </body>
 </html>
