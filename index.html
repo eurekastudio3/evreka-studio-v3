@@ -47,13 +47,18 @@
 
     .socials {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       margin-top: 25px;
+      align-items: center;
+      justify-content: center;
     }
 
     .socials a {
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       background: linear-gradient(90deg, #ff7b00, #0077ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -61,8 +66,14 @@
     }
 
     .socials a:hover {
-      opacity: 0.7;
       transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    .socials svg {
+      width: 18px;
+      height: 18px;
+      fill: url(#gradient);
     }
 
     footer {
@@ -79,9 +90,18 @@
   <p>Designs that inspire. Creations that glow.</p>
 
   <div class="socials">
-    <a href="https://instagram.com/evrekastudio" target="_blank">Instagram</a>
-    <a href="https://behance.net/evrekastudio" target="_blank">Behance</a>
-    <a href="mailto:hello@evrekastudio.com">Email</a>
+    <a href="https://instagram.com/evrekastudio" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.8-.7a1 1 0 110 2 1 1 0 010-2z"/></svg>
+      Instagram
+    </a>
+    <a href="https://behance.net/evrekastudio" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 9h-6V7h6v2zM7.8 9c1.2 0 2.2.5 2.8 1.4.4.5.6 1 .6 1.6 0 .6-.2 1.2-.6 1.7-.6.9-1.6 1.3-2.8 1.3H4v3.9H2V9h5.8zM4 11v2.1h3.6c.6 0 1-.1 1.3-.4.3-.3.4-.6.4-1s-.1-.8-.4-1c-.3-.3-.7-.4-1.3-.4H4zm11.6 1.4c.3-.9 1.2-1.6 2.4-1.6 1.5 0 2.6.8 2.8 2.2H15.6zm4.9 2.3c-.4 1.3-1.5 2-3 2-1.8 0-3.1-1.2-3.1-3 0-1.8 1.3-3 3.1-3 1.8 0 2.9 1.1 2.9 2.8 0 .2 0 .5-.1.8h-4.8c.1.9.8 1.4 2 1.4.8 0 1.4-.3 1.6-.8h1.4z"/></svg>
+      Behance
+    </a>
+    <a href="mailto:hello@evrekastudio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.5l8 5 8-5V6H4zm16 12V9.5l-8 5-8-5V18h16z"/></svg>
+      Email
+    </a>
   </div>
 
   <footer>© 2025 Eureka Studio. All rights reserved.</footer>
