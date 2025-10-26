@@ -81,21 +81,30 @@
     </section>
 
     <!-- GALERİ / PORTFOLYO -->
-    <section id="projects" class="gallery">
-  <h2>🕯️ Çalışmalar</h2>
-  <p class="gallery-intro">
-    Her biri sevgiyle üretilmiş, renk ve dokunun uyumunu yansıtan benzersiz tasarımlar.
-  </p>
+    <style>
+  /* --- GALERİ RESİMLERİ BOYUT AYARI --- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    padding: 0 30px;
+    justify-items: center;
+  }
 
-  <div class="gallery-grid">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0915.jpeg" alt="Eureka Studio Tasarım 1">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0929.jpeg" alt="Eureka Studio Tasarım 2">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1201.jpeg" alt="Eureka Studio Tasarım 3">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1468.png" alt="Eureka Studio Tasarım 4">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1598.jpeg" alt="Eureka Studio Tasarım 5">
-    <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1497.jpeg" alt="Eureka Studio Tasarım 6">
-  </div>
-</section>
+  .gallery-grid img {
+    width: 90%; /* görsel genişliği küçültüldü */
+    height: 220px; /* yükseklik daha orantılı */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+</style>
     <!-- İLETİŞİM / SOSYAL -->
     <section id="iletisim" class="section">
       <div class="container">
