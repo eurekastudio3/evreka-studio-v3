@@ -4,112 +4,102 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eureka Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Zarif el yazısı + temiz gövde fontu -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --accent-orange:#f68a1f; /* Hepsiburada turuncusuna yakın */
-      --accent-blue:#1f8fe6;
-      --text:#3a3a3a;
+      --orange:#f6861f;     /* Hepsiburada'ya yakın sıcak turuncu */
+      --blue:#1e88ff;       /* canlı mavi */
+      --ink:#444;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+      font-family:Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+      color:var(--ink);
       background:#fff;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
     }
+
     .wrap{
       max-width:980px;
-      margin:0 auto;
-      padding:48px 20px 36px;
+      margin-inline:auto;
+      padding:56px 20px 40px;
       text-align:center;
     }
-    /* LOGO */
+
+    /* LOGO (şeffaf PNG) */
     .logo{
-      margin:12px auto 24px;
-      display:inline-block;
-    }
-    .logo img{
+      width:min(520px, 90vw);
+      margin:18px auto 26px;
       display:block;
-      width:clamp(220px, 48vw, 420px);
-      height:auto;
-      background:transparent;    /* şeffaf kalsın */
-      border:0; outline:0; box-shadow:none; /* çizgi/gölge yok */
-      image-rendering:auto;
+      filter: drop-shadow(0 8px 26px rgba(0,0,0,.12));
+      border-radius:20px;              /* köşe parlamalarını yumuşatır; şeffaf PNG’de sorun yaratmaz */
     }
 
-    /* Başlık (gradient) */
+    /* Başlık – el yazısı ve renk bölmeli */
     h1{
-      margin:6px 0 14px;
-      font-size:clamp(30px, 6vw, 56px);
-      font-weight:700;
-      letter-spacing:.4px;
-      background:linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
-      -webkit-background-clip:text;
-      background-clip:text;
-      -webkit-text-fill-color:transparent;
+      margin:0 0 10px;
+      font-family:Allura, cursive;
+      font-size: clamp(44px, 7vw, 86px);
+      line-height:1;
+      font-weight:400;
+      letter-spacing:.5px;
     }
+    .brand-eu-st{ color:var(--orange); }  /* “Eureka St” -> turuncu */
+    .brand-udio{ color:var(--blue); }     /* “udio” -> mavi   */
 
     .tagline{
-      margin:0 auto 24px;
-      max-width:760px;
-      font-size:clamp(16px, 2.9vw, 22px);
-      line-height:1.55;
-      opacity:.9;
+      margin:10px auto 26px;
+      max-width:780px;
+      font-size: clamp(16px, 2.6vw, 22px);
+      line-height:1.6;
+      color:#6b6b6b;
     }
 
+    /* Sosyal linkler */
     .socials{
-      margin-top:18px;
-      display:flex;
-      gap:26px;
-      justify-content:center;
-      flex-wrap:wrap;
-      font-weight:600;
+      margin:22px 0 34px;
+      display:flex; gap:26px;
+      justify-content:center; flex-wrap:wrap;
     }
     .socials a{
-      text-decoration:none;
-      position:relative;
-      padding-bottom:2px;
-      background:linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
-      -webkit-background-clip:text;
-      background-clip:text;
-      -webkit-text-fill-color:transparent;
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none; font-weight:600;
+      color:var(--ink);
+      transition:.25s ease;
     }
-    .socials a::after{
-      content:"";
-      position:absolute; left:0; bottom:-2px;
-      width:0; height:2px; border-radius:2px;
-      background:linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
-      transition:width .25s ease;
-    }
-    .socials a:hover::after{ width:100%; }
+    .socials a:hover{ transform:translateY(-2px); }
+    .ig{ color:var(--orange); }
+    .be{ color:#b7772a; }
+    .em{ color:#d47a1b; }
 
     footer{
-      margin-top:36px;
-      font-size:14px; opacity:.7;
+      margin-top:10px;
+      font-size:14px; color:#9a9a9a;
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <!-- ŞEFFAF LOGO: dosya adı tam olarak “eureka-logo.png.PNG” olmalı -->
-    <div class="logo">
-      <img src="eureka-logo.png.PNG" alt="Eureka Studio Logo" />
-    </div>
+    <!-- ŞEFFAF LOGO: dosya adı tam olarak eureka-logo.png.PNG olmalı -->
+    <img class="logo" src="eureka-logo.png.PNG" alt="Eureka Studio Logosu" />
 
-    <h1>Eureka Studio</h1>
+    <h1>
+      <span class="brand-eu-st">Eureka St</span><span class="brand-udio">udio</span>
+    </h1>
+
     <p class="tagline">
       Sanat, tasarım ve yaratıcılığın buluştuğu yer. Epoksi ve mum tasarımlarında benzersiz dokunuşlar.
     </p>
 
     <nav class="socials">
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
-      <a href="mailto:info@eurekastudio.com">Email</a>
+      <a class="ig" href="https://instagram.com/" target="_blank" rel="noopener">📸 Instagram</a>
+      <a class="be" href="https://behance.net/"  target="_blank" rel="noopener">🎨 Behance</a>
+      <a class="em" href="mailto:info@eurekastudio.com">✉️ Email</a>
     </nav>
 
     <footer>© 2025 Eureka Studio. Tüm hakları saklıdır.</footer>
