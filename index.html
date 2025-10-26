@@ -3,56 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eureka Studio</title>
+  <title>✨ Eureka Studio ✨</title>
   <style>
     body {
-      background-color: #0d0d0d;
+      background-color: #000;
       color: #fff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      font-family: "Poppins", sans-serif;
       text-align: center;
+      margin: 0;
+      padding: 0;
     }
 
-    img {
-      width: 160px;
-      margin-bottom: 20px;
+    .logo {
+      display: block;
+      margin: 60px auto 30px;
+      max-width: 220px;
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
     }
 
     h1 {
       font-size: 3rem;
-      letter-spacing: 3px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #ff7f00, #ff0099, #007bff);
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff6f00, #ff4081, #7c4dff, #2979ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin: 0;
     }
 
     p {
-      font-size: 1.1rem;
-      opacity: 0.85;
-      max-width: 400px;
+      font-size: 1.2rem;
+      margin-top: 24px;
+      line-height: 1.6;
+      color: #ccc;
     }
 
-    .sparkle {
-      font-size: 1.4rem;
-      animation: glow 1.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 8px #ff7f00; }
-      to { text-shadow: 0 0 20px #ff0099; }
+    .sparkles {
+      margin: 16px 0;
+      font-size: 1.5rem;
     }
   </style>
 </head>
 <body>
-<img class="logo" src="logo.png.PNG" alt="Eureka Studio Logo" width="260" height="260" loading="lazy" />
-  <h1><span class="sparkle">✨</span> Eureka Studio <span class="sparkle">✨</span></h1>
-  <p>Tasarım, sanat ve duyguyla hikayeler yaratıyoruz.<br>Something creative is coming soon.</p>
+  <img class="logo" src="logo.png.PNG" alt="Eureka Studio Logo" />
+  <div class="sparkles">✨</div>
+  <h1>Eureka Studio</h1>
+  <div class="sparkles">✨</div>
+  <p>
+    Tasarım, sanat ve duyguyla hikayeler yaratıyoruz.<br />
+    Something creative is coming soon.
+  </p>
 </body>
 </html>
