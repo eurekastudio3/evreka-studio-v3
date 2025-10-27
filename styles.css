@@ -1,91 +1,18 @@
-:root{
-  --bg:#f3f2ef;         /* light beige/grey */
-  --card:#ffffff;
-  --text:#222;
-  --muted:#6b7280;
-  --ring:0 8px 22px rgba(0,0,0,.08);
-  --radius:18px;
-}
+/* mevcut stillerinin üstüne/sonuna ekle */
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-  color:var(--text);
-  background:var(--bg);
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-
-/* Header */
-.site-header{
-  position:sticky; top:0; z-index:50;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:16px; padding:14px 18px;
-  background:rgba(243,242,239,.7);
-  backdrop-filter:saturate(120%) blur(8px);
-  border-bottom:1px solid rgba(0,0,0,.06);
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit}
-.brand__logo{width:36px; height:36px; object-fit:contain; border-radius:6px}
-.brand__text{font-size:20px; font-weight:700; letter-spacing:.2px}
-.nav{display:flex; gap:20px}
-.nav a{color:var(--text); text-decoration:none; font-weight:600; opacity:.9}
-.nav a:hover{opacity:1}
-
-.lang-switch{display:flex; gap:8px; margin-right:auto; margin-left:12px}
+.lang-switch{display:flex; gap:8px; margin:0 12px}
 .lang-btn{
-  border:1px solid rgba(0,0,0,.1);
+  border:1px solid rgba(0,0,0,.12);
   background:#fff; color:#111; font-weight:700;
   padding:6px 10px; border-radius:10px; cursor:pointer;
 }
-.lang-btn.active{background:#111; color:#fff;}
+.lang-btn.active{background:#111; color:#fff}
 
-/* Sections */
-.section{max-width:1100px; margin:56px auto; padding:0 18px}
-.section h2{font-size:34px; margin:0 0 10px}
-.lead{font-size:18px; color:var(--muted); margin:10px 0 18px}
-.bullets{margin:0; padding-left:20px}
-.muted{color:var(--muted)}
-
-/* Gallery: mobile 2-col, desktop 3-col */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:22px; margin-top:22px;
+/* RTL (Hebrew) için yön ve hizalama */
+html[dir="rtl"]{
+  direction: rtl;
+  text-align: right;
 }
-@media (min-width:900px){
-  .gallery{grid-template-columns:repeat(3, 1fr)}
-}
-
-/* Cards */
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--ring);
-  overflow:hidden;
-  transition:transform .18s ease, box-shadow .18s ease;
-}
-.card:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.10)}
-.card img{
-  width:100%;
-  aspect-ratio:1/1;     /* perfect square */
-  object-fit:cover;
-  display:block;
-}
-.card figcaption{padding:14px 14px 16px}
-.card h3{margin:0 0 6px; font-size:18px}
-.card p{margin:0; color:var(--muted); font-size:15px; line-height:1.45}
-
-/* Links */
-.links{display:flex; gap:20px; flex-wrap:wrap}
-.links a{font-weight:700; color:var(--text); text-decoration:none; border-bottom:2px solid rgba(0,0,0,.12); padding-bottom:2px}
-.links a:hover{border-bottom-color:rgba(0,0,0,.3)}
-
-/* Footer */
-.site-footer{ text-align:center; color:#7b7f87; padding:28px 12px 40px }
-
-/* Subtle fade-in */
-.reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease}
-.reveal.is-visible{opacity:1; transform:none}
+html[dir="rtl"] .nav{flex-direction: row-reverse}
+html[dir="rtl"] .site-header{flex-direction: row-reverse}
+html[dir="rtl"] .brand{flex-direction: row-reverse}
