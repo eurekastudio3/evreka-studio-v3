@@ -1,220 +1,101 @@
-:root{
-  --bg:#ffffff;
-  --text:#222;
-  --muted:#6b7280;
+/* ===============================
+   EVREKA STUDIO - ANA STİL DOSYASI
+   =============================== */
 
-  --orange:#ff7b00;     /* Hepsiburada tonuna yakın sıcak turuncu */
-  --blue:#1e9bff;       /* canlı mavi */
-  --grad:linear-gradient(90deg,var(--orange),var(--blue));
-  --card:#f7f7f8;
-  --ring: 0 10px 30px rgba(0,0,0,.08);
-}
-
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+:root {
+  --bg: #ffffff;
+  --text: #000000; /* Tüm yazılar siyah */
+  --muted: #6b7280;
+  --orange: #ff7b00;
+  --blue: #1e9bff;
+  --card: #f7f7f8;
+  --ring: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.container{width:min(1100px,92%);margin-inline:auto}
-
-.site-header{
-  position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px);
-  background:rgba(255,255,255,.75); border-bottom:1px solid #eef0f3; z-index:20;
-}
-.nav{display:flex; align-items:center; gap:16px; padding:14px 0}
-.brand{font-weight:800; font-size:1.25rem; text-decoration:none; letter-spacing:.5px}
-.brand-eureka{background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
-.brand-studio{color:var(--blue); margin-left:.25ch}
-
-.links{margin-left:auto; display:flex; gap:18px}
-.links a{color:#444; text-decoration:none}
-.links a:hover{color:#000}
-.menu-btn{display:none}
-
-.hero{
-  padding:56px 0 24px;
-}
-.hero-inner{
-  display:grid; place-items:center; text-align:center; gap:20px;
-}
-.hero-logo{
-  width:min(520px,88vw);
-  height:auto;
-  border-radius:24px;       /* sadece mevcut görsel kare ise yumuşak kenar */
-  box-shadow:var(--ring);
-  background:#fff;
-}
-.title{
-  font-weight:800;
-  font-size:clamp(36px,5vw,56px);
-  margin:0;
-  letter-spacing:.5px;
-}
-.title .brand-eureka{
-  background:var(--grad);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-}
-.title .brand-studio{color:var(--blue)}
-.lead{
-  margin:6px 0 18px;
-  color:var(--muted);
-  font-size:clamp(16px,2.2vw,20px);
-  max-width:58ch;
+* {
+  box-sizing: border-box;
 }
 
-.cta-row{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
-.btn{
-  padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:600;
-  transition:.2s transform ease, .2s box-shadow ease, .2s opacity ease;
-}
-.btn.primary{background:var(--grad); color:#fff; box-shadow:0 8px 20px rgba(30,155,255,.25)}
-.btn.ghost{border:2px solid #e5e7eb; color:#111}
-.btn:hover{transform:translateY(-2px)}
-
-.section{padding:56px 0}
-.section.alt{background:#fbfbfc}
-.section h2{
-  margin:0 0 8px; font-size:clamp(24px,3.2vw,32px)
-}
-.muted{color:var(--muted)}
-
-.features{display:grid; gap:10px; padding:0; margin:20px 0 0; list-style:none}
-.features li::before{content:"✨ ";}
-
-.grid{
-  margin-top:22px;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap:16px;
-}
-.card{
-  margin:0; background:var(--card); border-radius:16px; padding:12px;
-  box-shadow:var(--ring); text-align:center;
-}
-.card .ph{
-  height:160px; border-radius:12px; background:
-    radial-gradient(ellipse at 30% 20%, #ffe8d1, transparent 40%),
-    radial-gradient(ellipse at 70% 80%, #d7edff, transparent 40%),
-    #fff;
-  border:1px solid #eee;
-}
-.card figcaption{margin-top:10px; font-weight:600}
-
-.socials{display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:10px}
-.socials a{
-  position:relative; text-decoration:none; font-weight:600;
-  background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-}
-.socials a::after{
-  content:""; position:absolute; left:0; right:0; bottom:-3px; height:2px;
-  background:var(--grad); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
-}
-.socials a:hover::after{transform:scaleX(1)}
-
-.site-footer{padding:28px 0; border-top:1px solid #eef0f3; color:#8b90a0; text-align:center}
-
-/* Mobil Menü */
-@media (max-width: 760px){
-  .menu-btn{display:inline-flex; margin-left:auto; font-size:22px; background:transparent; border:0; cursor:pointer}
-  .links{display:none; position:absolute; top:60px; right:4%; background:#fff; padding:12px 14px; border:1px solid #eee; border-radius:12px; box-shadow:var(--ring)}
-  .links.open{display:flex; flex-direction:column}
-  /* === GALERİ / ÇALIŞMALAR === */
-.section h2{
-  font-size: clamp(1.6rem, 2.8vw + 1rem, 2.2rem);
-  margin: 0 0 10px;
-}
-.section p{
-  font-size: clamp(1rem, 1.2vw + .8rem, 1.125rem);
-  color:#555;
+html, body {
+  height: 100%;
 }
 
-.gallery-grid{
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 14px;
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.gallery-grid img{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 6px 22px rgba(0,0,0,.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-  background:#f3f3f3;
+/* ===============================
+   HEADER / NAVBAR
+   =============================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
 
-.gallery-grid img:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-}
-
-@media (min-width: 900px){
-  /* 🌿 LOGO (sol üst) */
 .logo a {
-  font-weight: 700;
   font-size: 1.6rem;
-  color: #000; /* Siyah logo yazısı */
-  text-decoration: none;
-}
-
-/* 🌿 NAVBAR (üst menü linkleri) */
-nav a {
+  font-weight: 700;
   color: #000;
   text-decoration: none;
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #000;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #555; /* Hafif gri hover efekti */
+  color: #555;
 }
 
-/* 🌿 HERO (ana başlık ve alt yazı) */
+/* ===============================
+   HERO ALANI
+   =============================== */
+
+.hero {
+  text-align: center;
+  padding: 80px 10% 50px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #000; /* Ana başlık siyah */
-  text-align: center;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: #000;
+  margin-top: 1rem;
 }
 
 .hero p {
-  color: #222; /* Paragraflar koyu gri */
-  text-align: center;
   font-size: 1.1rem;
-  line-height: 1.6;
+  color: #222;
+  margin-top: 0.5rem;
 }
 
-/* 🌿 GALERİ GÖRÜNÜMÜ */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  justify-items: center;
-  padding: 20px 0;
-}
+/* ===============================
+   BUTONLAR
+   =============================== */
 
-.gallery-grid img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* 🌿 BUTONLAR (genel görünüm) */
 button,
 a.button,
 .cta {
@@ -226,26 +107,22 @@ a.button,
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 10px 6px;
 }
 
-/* 🌿 Turuncu buton – "Çalışmalara Bak" */
-button.orange,
 a.orange,
 .cta-orange {
-  background-color: #ff7b00; /* Sıcak turuncu */
+  background-color: var(--orange);
   color: #fff;
   border: none;
 }
 
-button.orange:hover,
 a.orange:hover,
 .cta-orange:hover {
-  background-color: #e86d00; /* Bir ton koyusu */
+  background-color: #e86d00;
   transform: translateY(-2px);
 }
 
-/* 🌿 Beyaz kenarlıklı buton – "İletişime Geç" */
-button.outline,
 a.outline,
 .cta-outline {
   background-color: #fff;
@@ -253,7 +130,6 @@ a.outline,
   color: #000;
 }
 
-button.outline:hover,
 a.outline:hover,
 .cta-outline:hover {
   background-color: #000;
@@ -261,20 +137,117 @@ a.outline:hover,
   transform: translateY(-2px);
 }
 
-/* 🌿 ALT KISIM (footer ve iletişim) */
+/* ===============================
+   HAKKINDA ALANI
+   =============================== */
+
+section {
+  padding: 50px 8%;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #000;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   GALERİ / ÇALIŞMALAR
+   =============================== */
+
+.gallery-intro {
+  text-align: center;
+  color: #222;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   İLETİŞİM ALANI
+   =============================== */
+
+#iletisim {
+  text-align: center;
+}
+
+#iletisim a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+#iletisim a:hover {
+  color: var(--blue);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
 footer {
   text-align: center;
-  color: #555;
+  color: #666;
   font-size: 0.9rem;
-  margin-top: 30px;
-  padding: 10px 0;
+  margin-top: 40px;
+  padding: 20px 0;
   border-top: 1px solid #eee;
 }
-  .gallery-grid{
-    gap: 16px;
+
+/* ===============================
+   RESPONSIVE DÜZENLEMELER
+   =============================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
   }
-  .gallery-grid img{
-    height: 220px;
+
+  nav a {
+    margin: 10px 12px;
   }
-}
+
+  .hero img {
+    max-width: 320px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 }
