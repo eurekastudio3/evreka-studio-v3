@@ -1,87 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eureka Studio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ÜST -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#" class="brand">Eureka Studio</a>
-      <nav class="menu">
-        <a href="#hakkinda">Hakkında</a>
-        <a href="#projects">Çalışmalar</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
+  <!-- 🔹 Üst Logo ve Başlık -->
+  <header>
+    <div class="logo-container">
+      <img src="eureka-logo.png.PNG" alt="Eureka Studio Logo" />
+      <span class="brand-name">Eureka Studio</span>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main class="container">
-    <section class="hero" id="home">
-      <!-- Logonuz / görseliniz: repo kökünde eureka-logo.png.PNG -->
-      <img src="eureka-logo.png.PNG" alt="Eureka Studio Logo" class="hero-logo" />
-      <h1 class="hero-title">Eureka Studio</h1>
-      <p class="lead">
-        Sanat, tasarım ve yaratıcılığın buluştuğu yer.
-        Epoksi ve mum tasarımlarında benzersiz dokunuşlar.
-      </p>
-      <div class="cta">
-        <a class="btn" href="#projects">Çalışmalara Bak</a>
-        <a class="btn ghost" href="#iletisim">İletişime Geç</a>
-      </div>
+  <!-- 🔹 Ana İçerik -->
+  <main>
+    <section class="hero">
+      <h1>Yaratıcılığın Yeni Noktası</h1>
+      <p>Tasarım, sanat ve fikirlerin buluştuğu yer.</p>
+      <a href="#works" class="btn">Çalışmalarımız</a>
     </section>
 
-    <!-- HAKKINDA -->
-    <section id="hakkinda" class="section">
-      <h2>Hakkında</h2>
-      <p>
-        Her parçamız; renk, doku ve ışığın dansından ilham alır.
-        Sıcak turuncular ile derin mavilerin buluştuğu dünyamıza hoş geldin.
-      </p>
-      <ul class="features">
-        <li>El yapımı ve sınırlı üretim</li>
-        <li>Özenle seçilmiş pigment & esanslar</li>
-        <li>Kişiye özel tasarım seçenekleri</li>
-      </ul>
-    </section>
-
-    <!-- ÇALIŞMALAR / GALERİ -->
-    <section id="projects" class="section">
+    <!-- 🔹 Galeri -->
+    <section id="works" class="gallery">
       <h2>Çalışmalar</h2>
-      <p class="muted">
-        Her biri sevgiyle üretilmiş, renk ve dokunun uyumunu yansıtan benzersiz tasarımlar.
-      </p>
-
       <div class="gallery-grid">
-        <!-- Senin yüklediğin ham linkler (raw) -->
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0915.jpeg"  alt="Eureka Studio Çalışma 1" />
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0929.jpeg"  alt="Eureka Studio Çalışma 2" />
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1201.jpeg"  alt="Eureka Studio Çalışma 3" />
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1468.png"   alt="Eureka Studio Çalışma 4" />
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1497.jpeg" alt="Eureka Studio Çalışma 5" />
-        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1598.jpeg" alt="Eureka Studio Çalışma 6" />
-      </div>
-    </section>
-
-    <!-- İLETİŞİM -->
-    <section id="iletisim" class="section">
-      <h2>İletişim</h2>
-      <p>Soruların ve siparişlerin için:</p>
-      <div class="socials">
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
-        <a href="mailto:info@evrekastudio.com">Email</a>
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0915.jpeg" alt="Çalışma 1" />
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_0929.jpeg" alt="Çalışma 2" />
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1201.jpeg" alt="Çalışma 3" />
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1468.png" alt="Çalışma 4" />
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1497.jpeg" alt="Çalışma 5" />
+        <img src="https://raw.githubusercontent.com/eurekastudio3/evreka-studio-v3/refs/heads/main/IMG_1598.jpeg" alt="Çalışma 6" />
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      © 2025 Eureka Studio. Tüm hakları saklıdır.
+  <!-- 🔹 Alt Bilgi -->
+  <footer>
+    <p>© 2025 Eureka Studio. Tüm hakları saklıdır.</p>
+    <div class="socials">
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="https://behance.net/" target="_blank">🎨 Behance</a>
+      <a href="mailto:info@evrekastudio.com">✉️ Email</a>
     </div>
   </footer>
 </body>
