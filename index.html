@@ -1,109 +1,112 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eureka Studio</title>
   <link rel="preload" as="image" href="./eureka-logo.png.PNG">
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css?v=10" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
 </head>
 <body>
-  <!-- ÜST BAR -->
+  <!-- HEADER -->
   <header class="site-header">
     <a class="brand" href="#top">
       <img src="./eureka-logo.png.PNG" alt="Eureka Studio Logo" class="brand__logo" />
-      <span class="brand__text">
-        <strong>Eureka</strong> Studio
-      </span>
+      <span class="brand__text"><strong>Eureka</strong> Studio</span>
     </a>
+
+    <!-- Language Switcher -->
+    <div class="lang-switch">
+      <button data-lang="en" class="lang-btn active">EN</button>
+      <button data-lang="tr" class="lang-btn">TR</button>
+    </div>
+
     <nav class="nav">
-      <a href="#hakkinda">Hakkında</a>
-      <a href="#calismalar">Çalışmalar</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#works" data-i18n="nav.works">Works</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- HAKKINDA -->
-    <section id="hakkinda" class="section reveal">
-      <h2>Hakkında</h2>
-      <p class="lead">
-        Her parçamız; renk, doku ve ışığın dansından ilham alır. Sıcak turuncular ile
-        derin mavilerin buluştuğu dünyamıza hoş geldin.
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2 data-i18n="about.title">About</h2>
+      <p class="lead" data-i18n="about.lead">
+        Each piece is inspired by the dance of color, texture, and light. Welcome to our world where warm oranges meet deep blues.
       </p>
       <ul class="bullets">
-        <li>El yapımı ve sınırlı üretim</li>
-        <li>Özenle seçilmiş pigment &amp; esanslar</li>
-        <li>Kişiye özel tasarım seçenekleri</li>
+        <li data-i18n="about.b1">Handcrafted, small-batch production</li>
+        <li data-i18n="about.b2">Carefully selected pigments & essences</li>
+        <li data-i18n="about.b3">Bespoke, made-to-order designs</li>
       </ul>
     </section>
 
-    <!-- GALERİ -->
-    <section id="calismalar" class="section reveal">
-      <h2>Çalışmalar</h2>
-      <p class="muted">Her biri sevgiyle üretilmiş, renk ve dokunun uyumunu yansıtan tasarımlar.</p>
+    <!-- WORKS -->
+    <section id="works" class="section reveal">
+      <h2 data-i18n="works.title">Works</h2>
+      <p class="muted" data-i18n="works.lead">
+        Designs that reflect harmony of color and texture — each crafted with care.
+      </p>
 
       <div class="gallery">
-        <!-- 1 -->
         <figure class="card">
-          <img src="./IMG_0915.jpeg" alt="Nazar Boncuğu Mum" loading="lazy" />
+          <img src="./IMG_0915.jpeg" alt="Evil Eye Candle" loading="lazy" />
           <figcaption>
-            <h3>Nazar Boncuğu Mum</h3>
-            <p>Koruyucu enerjisiyle evine huzur ve denge getirir.</p>
+            <h3 data-i18n="works.w1.title">Evil Eye Candle</h3>
+            <p data-i18n="works.w1.desc">A gentle piece that brings balance and calm to your space.</p>
           </figcaption>
         </figure>
 
-        <!-- 2 -->
         <figure class="card">
-          <img src="./IMG_0929.jpeg" alt="Tropik Katman Mum" loading="lazy" />
+          <img src="./IMG_0929.jpeg" alt="Tropical Layers Candle" loading="lazy" />
           <figcaption>
-            <h3>Tropik Katman Mum</h3>
-            <p>Yaz esintilerini anımsatan canlı katmanlar.</p>
+            <h3 data-i18n="works.w2.title">Tropical Layers</h3>
+            <p data-i18n="works.w2.desc">Vibrant colors with a summer breeze feel and fruity notes.</p>
           </figcaption>
         </figure>
 
-        <!-- 3 -->
         <figure class="card">
-          <img src="./IMG_1201.jpeg" alt="Ayıcık Mum" loading="lazy" />
+          <img src="./IMG_1201.jpeg" alt="Teddy Candle" loading="lazy" />
           <figcaption>
-            <h3>Ayıcık Mum</h3>
-            <p>Sevgi dolu ambiyans için yumuşak notalar.</p>
+            <h3 data-i18n="works.w3.title">Teddy Candle</h3>
+            <p data-i18n="works.w3.desc">Playful charm with a heartwarming, cozy look.</p>
           </figcaption>
         </figure>
 
-        <!-- 4 -->
         <figure class="card">
-          <img src="./IMG_1497.jpeg" alt="Çikolatalı Mum" loading="lazy" />
+          <img src="./IMG_1497.jpeg" alt="Chocolate Candle" loading="lazy" />
           <figcaption>
-            <h3>Çikolatalı Mum</h3>
-            <p>Tatlı esintiler ve modern dokular.</p>
+            <h3 data-i18n="works.w4.title">Chocolate Candle</h3>
+            <p data-i18n="works.w4.desc">Sweet hints with modern textures and a warm aura.</p>
           </figcaption>
         </figure>
 
-        <!-- 5 -->
         <figure class="card">
-          <img src="./IMG_1598.jpeg" alt="Karamel Crumble" loading="lazy" />
+          <img src="./IMG_1598.jpeg" alt="Caramel Crumble" loading="lazy" />
           <figcaption>
-            <h3>Karamel Crumble</h3>
-            <p>Sıcak karamel notalarıyla nefis atmosfer.</p>
+            <h3 data-i18n="works.w5.title">Caramel Crumble</h3>
+            <p data-i18n="works.w5.desc">Creamy layers and caramel tones for a snug atmosphere.</p>
           </figcaption>
         </figure>
 
-        <!-- 6 -->
         <figure class="card">
           <img src="./IMG_1468.png" alt="Gold Noir" loading="lazy" />
           <figcaption>
-            <h3>Gold Noir</h3>
-            <p>Siyah dokuda altın detaylar, zarif bir siluet.</p>
+            <h3 data-i18n="works.w6.title">Gold Noir</h3>
+            <p data-i18n="works.w6.desc">Elegant gold details on a dark canvas — refined and bold.</p>
           </figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- İLETİŞİM -->
-    <section id="iletisim" class="section reveal">
-      <h2>İletişim</h2>
-      <p>Soruların ve siparişlerin için:</p>
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.lead">For inquiries and custom orders:</p>
       <div class="links">
         <a href="#" aria-label="Instagram">Instagram</a>
         <a href="#" aria-label="Behance">Behance</a>
@@ -113,9 +116,9 @@
   </main>
 
   <footer class="site-footer">
-    © 2025 Eureka Studio. Tüm hakları saklıdır.
+    © 2025 Eureka Studio. All rights reserved.
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=10"></script>
 </body>
 </html>
