@@ -1,46 +1,68 @@
-/* === GALERİ (güncel) === */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  justify-items:center;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
 }
 
-/* Telefonlarda da 2 sütun ZORLA */
-@media (max-width:640px){
-  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+.figure {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 230px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Kare görsel alanı */
-.figure{
-  width:100%;
-  max-width:240px;
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-  overflow:hidden;
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.figure:hover{ transform:scale(1.05); box-shadow:0 6px 16px rgba(0,0,0,.12); }
-
-/* Sadece görseli kare yapan sarmalayıcı */
-.thumb{
-  width:100%;
-  aspect-ratio:1/1;           /* kare */
-  overflow:hidden;
-}
-.thumb img{
-  width:100%; height:100%;
-  object-fit:cover; display:block;
+.figure:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.caption{
-  padding:10px 12px 14px;
-  background:#fff;
+/* Kare çerçeve: kesin çözüm */
+.thumb {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* kare oran */
+  overflow: hidden;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
 }
-.caption h4{
-  margin:6px 0 4px; font-size:15px; font-weight:600; color:#111;
+
+.thumb img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
 }
-.caption p{
-  margin:0; font-size:13px; color:#666;
+
+.caption {
+  padding: 10px 12px 14px;
+}
+
+.caption h4 {
+  margin: 6px 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Mobilde 2 sütun */
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
