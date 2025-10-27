@@ -20,9 +20,7 @@ body {
   align-items: center;
   gap: 8px;
 }
-.logo img {
-  height: 32px;
-}
+.logo img { height: 32px; }
 .navbar nav a {
   text-decoration: none;
   color: #111;
@@ -75,9 +73,7 @@ h2 {
   font-size: 1.6rem;
   margin-bottom: 16px;
 }
-p {
-  margin-bottom: 20px;
-}
+p { margin-bottom: 20px; }
 
 /* Çalışmalar */
 .gallery {
@@ -93,9 +89,7 @@ p {
   text-align: center;
   transition: transform .25s ease;
 }
-.card:hover {
-  transform: translateY(-4px);
-}
+.card:hover { transform: translateY(-4px); }
 .card img {
   width: 100%;
   aspect-ratio: 1/1;
