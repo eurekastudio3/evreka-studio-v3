@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eureka Studio</title>
   <style>
+    /* === GENEL === */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
@@ -30,8 +31,8 @@
     }
 
     .brand img {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       object-fit: contain;
       border-radius: 4px;
     }
@@ -74,6 +75,7 @@
       display: flex;
       justify-content: center;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -134,8 +136,8 @@
     /* === GALERİ === */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
       justify-items: center;
     }
 
@@ -145,15 +147,16 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       overflow: hidden;
       width: 100%;
-      max-width: 230px;
+      max-width: 240px;
       aspect-ratio: 1 / 1;
       display: flex;
       flex-direction: column;
-      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     figure:hover {
       transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     figure img {
@@ -164,12 +167,12 @@
     }
 
     figcaption {
-      padding: 8px 10px 12px;
+      padding: 10px 12px 16px;
       background: #fff;
     }
 
     figcaption h4 {
-      margin: 4px 0;
+      margin: 6px 0 4px;
       font-size: 15px;
       font-weight: 600;
     }
@@ -191,7 +194,7 @@
 
     @media (max-width: 640px) {
       figure {
-        max-width: 160px;
+        max-width: 170px;
       }
     }
   </style>
@@ -239,7 +242,7 @@
         <img src="IMG_0915.jpeg" alt="Nazar Boncuğu Mum">
         <figcaption>
           <h4>Nazar Boncuğu Mum</h4>
-          <p>Koruyucu enerjiyle zarif bir tasarım.</p>
+          <p>Koruyucu enerjisiyle evine huzur ve denge getiren sade ama güçlü bir tasarım.</p>
         </figcaption>
       </figure>
 
@@ -247,7 +250,7 @@
         <img src="IMG_0929.jpeg" alt="Tropik Katman Mum">
         <figcaption>
           <h4>Tropik Katman Mum</h4>
-          <p>Renklerin tropik enerjisiyle dolu bir dokunuş.</p>
+          <p>Canlı renklerin dansı! Yaz esintilerini, tatlı meyve aromalarını anımsatan enerjik bir dokunuş.</p>
         </figcaption>
       </figure>
 
@@ -255,7 +258,7 @@
         <img src="IMG_1201.jpeg" alt="Ayıcık Mum">
         <figcaption>
           <h4>Ayıcık Mum</h4>
-          <p>Sevgi dolu detaylarıyla özel bir hediye.</p>
+          <p>Sevgi dolu detaylarıyla kalpleri ısıtan, neşeli ve yumuşacık bir görünüm.</p>
         </figcaption>
       </figure>
 
@@ -263,7 +266,7 @@
         <img src="IMG_1497.jpeg" alt="Çikolatalı Mum">
         <figcaption>
           <h4>Çikolatalı Mum</h4>
-          <p>Tatlı esintiler ve lezzetli bir görünüm.</p>
+          <p>Tatlı esintilerle dolu, kakao ve vanilya tonlarının ilham verdiği sıcak bir tasarım.</p>
         </figcaption>
       </figure>
 
@@ -271,7 +274,7 @@
         <img src="IMG_1598.jpeg" alt="Altın Detaylı Mum">
         <figcaption>
           <h4>Altın Detaylı Mum</h4>
-          <p>Şıklık ve zarafetin birleştiği özel tasarım.</p>
+          <p>Şıklığın sembolü: Parıltılı altın detaylarıyla zarafet ve gücü bir arada sunar.</p>
         </figcaption>
       </figure>
 
@@ -279,7 +282,7 @@
         <img src="IMG_1468.png" alt="Karamel Mum">
         <figcaption>
           <h4>Karamel Mum</h4>
-          <p>Sıcak karamel tonlarında huzurlu bir atmosfer.</p>
+          <p>Kremamsı dokusu ve karamel tonlarıyla sıcacık bir atmosfer yaratır — huzurun kokusu.</p>
         </figcaption>
       </figure>
     </div>
