@@ -157,4 +157,41 @@ footer {
 .gallery-grid img:hover {
   transform: scale(1.03);
 }
+/* ===== ÇALIŞMALAR / GALERİ (KESİN ÇÖZÜM) ===== */
+
+/* Bölüm genel stilleri (opsiyonel ama düzenli görünüm için) */
+#projects.section {
+  padding: 80px 0 40px;
+}
+
+/* Grid yerleşimi */
+#projects .gallery-grid{
+  display: grid;
+  grid-template-columns: 1fr;      /* Mobil: tek sütun */
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Tablet ve üstü: 2 sütun */
+@media (min-width: 700px){
+  #projects .gallery-grid{
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+/* Görseller */
+#projects .gallery-grid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .25s ease;
+}
+#projects .gallery-grid img:hover{
+  transform: scale(1.02);
+}
+
 
