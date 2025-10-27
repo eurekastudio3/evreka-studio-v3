@@ -157,6 +157,119 @@ body{
 }
 
 @media (min-width: 900px){
+  /* 🌿 LOGO (sol üst) */
+.logo a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #000; /* Siyah logo yazısı */
+  text-decoration: none;
+}
+
+/* 🌿 NAVBAR (üst menü linkleri) */
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #555; /* Hafif gri hover efekti */
+}
+
+/* 🌿 HERO (ana başlık ve alt yazı) */
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #000; /* Ana başlık siyah */
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #222; /* Paragraflar koyu gri */
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 🌿 GALERİ GÖRÜNÜMÜ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌿 BUTONLAR (genel görünüm) */
+button,
+a.button,
+.cta {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🌿 Turuncu buton – "Çalışmalara Bak" */
+button.orange,
+a.orange,
+.cta-orange {
+  background-color: #ff7b00; /* Sıcak turuncu */
+  color: #fff;
+  border: none;
+}
+
+button.orange:hover,
+a.orange:hover,
+.cta-orange:hover {
+  background-color: #e86d00; /* Bir ton koyusu */
+  transform: translateY(-2px);
+}
+
+/* 🌿 Beyaz kenarlıklı buton – "İletişime Geç" */
+button.outline,
+a.outline,
+.cta-outline {
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+}
+
+button.outline:hover,
+a.outline:hover,
+.cta-outline:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 🌿 ALT KISIM (footer ve iletişim) */
+footer {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
   .gallery-grid{
     gap: 16px;
   }
