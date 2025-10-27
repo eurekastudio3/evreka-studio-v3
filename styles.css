@@ -1,33 +1,185 @@
-/* ======= ÇALIŞMALAR GALERİ (KARE, 2 SÜTUN) ======= */
-.section{max-width:1200px;margin:0 auto;padding:40px 16px;text-align:center}
-.section h2{font-size:32px;font-weight:700;margin:0 0 12px}
-.section p{color:#555;margin:0 0 28px}
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr); /* telefonda da 2'li */
-  gap:16px;
-  justify-items:center;
+/* ====== GENEL ====== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  background: #fff;
 }
 
-.square{
-  position:relative;
-  width:100%;
-  max-width:240px;
-  aspect-ratio:1/1;       /* kare */
-  border-radius:16px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.square:hover{transform:scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.12)}
-
-.square img{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover; display:block;
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eee;
 }
 
-/* daha geniş ekranlarda kareleri biraz büyüt */
-@media (min-width:768px){ .square{max-width:280px} }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+/* ====== HERO ====== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn.grad {
+  background: linear-gradient(90deg, #ff6600, #007bff);
+  color: #fff;
+}
+
+.btn.grad:hover {
+  opacity: 0.9;
+}
+
+.btn.ghost {
+  border: 2px solid #111;
+  color: #111;
+}
+
+.btn.ghost:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ====== SECTIONS ====== */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 24px;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ====== GALERİ ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1 / 1.2;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  transition: transform 0.25s ease;
+}
+
+.square:hover {
+  transform: scale(1.05);
+}
+
+.square img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+.square figcaption {
+  padding: 8px;
+}
+
+.square h4 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.square p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ====== MOBİL ====== */
+@media (max-width: 640px) {
+  .square {
+    max-width: 170px;
+  }
+}
