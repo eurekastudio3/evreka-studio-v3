@@ -1,268 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eureka Studio</title>
-  <style>
-    /* === GENEL === */
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      color: #111;
-      background: #fff;
-    }
-
-    /* === NAVBAR === */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 24px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #111;
-    }
-
-    .brand img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-
-    .brand-name {
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    nav a {
-      margin-left: 16px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ff6600;
-    }
-
-    /* === HERO === */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .btn.grad {
-      background: linear-gradient(90deg, #ff6600, #007bff);
-      color: #fff;
-    }
-
-    .btn.grad:hover {
-      opacity: 0.9;
-    }
-
-    .btn.ghost {
-      border: 2px solid #111;
-      color: #111;
-    }
-
-    .btn.ghost:hover {
-      background: #111;
-      color: #fff;
-    }
-
-    /* === SECTIONS === */
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .section p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: disc;
-      text-align: left;
-      max-width: 500px;
-      margin: 0 auto;
-      padding-left: 20px;
-    }
-
-    /* === GALERİ === */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
-      justify-items: center;
-    }
-
-    figure {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      overflow: hidden;
-      width: 100%;
-      max-width: 240px;
-      aspect-ratio: 1 / 1;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    figure:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    figure img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    figcaption {
-      padding: 10px 12px 16px;
-      background: #fff;
-    }
-
-    figcaption h4 {
-      margin: 6px 0 4px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    figcaption p {
-      font-size: 13px;
-      color: #666;
-      margin: 0;
-    }
-
-    /* === FOOTER === */
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #fafafa;
-      font-size: 14px;
-      color: #555;
-    }
-
-    @media (max-width: 640px) {
-      figure {
-        max-width: 170px;
-      }
-    }
-  </style>
+  <link rel="preload" as="image" href="eureka-logo.png.PNG">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header>
-    <a href="#" class="brand">
-      <img src="eureka-logo.png.PNG" alt="Eureka Studio Logo" />
-      <span class="brand-name">Eureka Studio</span>
+
+  <!-- ÜST BAR -->
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <img src="eureka-logo.png.PNG" alt="Eureka Studio logosu" />
+      <span class="brand-text">Eureka <strong>Studio</strong></span>
     </a>
-    <nav>
+    <nav class="nav">
       <a href="#hakkinda">Hakkında</a>
       <a href="#calismalar">Çalışmalar</a>
       <a href="#iletisim">İletişim</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Sanat, tasarım ve yaratıcılığın buluştuğu yer.</h2>
-    <p>Epoksi ve mum tasarımlarında benzersiz dokunuşlar.</p>
-    <div class="buttons">
-      <a href="#calismalar" class="btn grad">Çalışmalarımıza Bak</a>
-      <a href="#iletisim" class="btn ghost">İletişime Geç</a>
-    </div>
-  </section>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero section">
+      <h1>Sanat, tasarım ve yaratıcılığın buluştuğu yer.</h1>
+      <p class="lead">
+        Epoksi ve mum tasarımlarında benzersiz dokunuşlar.
+      </p>
+      <div class="cta">
+        <a class="btn grad" href="#calismalar">Çalışmalarımıza Bak</a>
+        <a class="btn ghost" href="#iletisim">İletişime Geç</a>
+      </div>
+    </section>
 
-  <section id="hakkinda" class="section">
-    <h2>Hakkında</h2>
-    <p>Her parçamız; renk, doku ve ışığın dansından ilham alır. 
-       Sıcak turuncular ile derin mavilerin buluştuğu dünyamıza hoş geldin.</p>
-    <ul>
-      <li>El yapımı ve sınırlı üretim</li>
-      <li>Özenle seçilmiş pigment & esanslar</li>
-      <li>Kişiye özel tasarım seçenekleri</li>
-    </ul>
-  </section>
+    <!-- HAKKINDA -->
+    <section id="hakkinda" class="section">
+      <h2>Hakkında</h2>
+      <p class="intro">
+        Her parçamız; renk, doku ve ışığın dansından ilham alır.
+        Sıcak turuncular ile derin mavilerin buluştuğu dünyamıza hoş geldin.
+      </p>
+      <ul class="features">
+        <li>El yapımı ve sınırlı üretim</li>
+        <li>Özenle seçilmiş pigment &amp; esanslar</li>
+        <li>Kişiye özel tasarım seçenekleri</li>
+      </ul>
+    </section>
 
-  <section id="calismalar" class="section">
-    <h2>Çalışmalar</h2>
-    <p>Her biri sevgiyle üretilmiş, renk ve dokunun uyumunu yansıtan tasarımlar.</p>
+    <!-- ÇALIŞMALAR -->
+    <section id="calismalar" class="section">
+      <h2>Çalışmalar</h2>
+      <p class="intro">
+        Her biri sevgiyle üretilmiş, renk ve dokunun uyumunu yansıtan tasarımlar.
+      </p>
 
-    <div class="gallery-grid">
+      <div class="gallery-grid">
+        <!-- Kart 1 -->
+        <article class="card">
+          <a class="thumb" href="IMG_0915.jpeg" target="_blank" rel="noopener">
+            <img src="IMG_0915.jpeg" alt="Nazar Boncuğu Mum" />
+          </a>
+          <div class="caption">
+            <h3>Nazar Boncuğu Mum</h3>
+            <p>Koruyucu enerjisiyle evine huzur ve denge getirir.</p>
+          </div>
+        </article>
 
-  <div class="figure">
-    <div class="thumb">
-      <img src="IMG_0915.jpeg" alt="Nazar Boncuğu Mum">
-    </div>
-    <div class="caption">
-      <h4>Nazar Boncuğu Mum</h4>
-      <p>Koruyucu enerjisiyle evine huzur ve denge getirir.</p>
-    </div>
-  </div>
+        <!-- Kart 2 -->
+        <article class="card">
+          <a class="thumb" href="IMG_0929.jpeg" target="_blank" rel="noopener">
+            <img src="IMG_0929.jpeg" alt="Tropik Katman Mum" />
+          </a>
+          <div class="caption">
+            <h3>Tropik Katman Mum</h3>
+            <p>Yaz esintilerini anımsatan canlı katmanlar.</p>
+          </div>
+        </article>
 
-  <div class="figure">
-    <div class="thumb">
-      <img src="IMG_0929.jpeg" alt="Tropik Katman Mum">
-    </div>
-    <div class="caption">
-      <h4>Tropik Katman Mum</h4>
-      <p>Yaz esintilerini anımsatan canlı katmanlar.</p>
-    </div>
-  </div>
+        <!-- Kart 3 -->
+        <article class="card">
+          <a class="thumb" href="IMG_1201.jpeg" target="_blank" rel="noopener">
+            <img src="IMG_1201.jpeg" alt="Ayıcık Mum" />
+          </a>
+          <div class="caption">
+            <h3>Ayıcık Mum</h3>
+            <p>Sevgi dolu ambiyans için yumuşak notalar.</p>
+          </div>
+        </article>
 
-  <!-- Diğer kartlar aynı şekilde -->
-</div>
-  <footer id="iletisim">
-    <p>© 2025 Eureka Studio — Tüm hakları saklıdır.</p>
+        <!-- Kart 4 -->
+        <article class="card">
+          <a class="thumb" href="IMG_1468.png" target="_blank" rel="noopener">
+            <img src="IMG_1468.png" alt="Çikolatalı Mum" />
+          </a>
+          <div class="caption">
+            <h3>Çikolatalı Mum</h3>
+            <p>Tatlı esintiler ve modern dokular.</p>
+          </div>
+        </article>
+
+        <!-- Kart 5 -->
+        <article class="card">
+          <a class="thumb" href="IMG_1497.jpeg" target="_blank" rel="noopener">
+            <img src="IMG_1497.jpeg" alt="Karamel Crumble Mum" />
+          </a>
+          <div class="caption">
+            <h3>Karamel Crumble</h3>
+            <p>Sıcak karamel notalarıyla nefis atmosfer.</p>
+          </div>
+        </article>
+
+        <!-- Kart 6 -->
+        <article class="card">
+          <a class="thumb" href="IMG_1598.jpeg" target="_blank" rel="noopener">
+            <img src="IMG_1598.jpeg" alt="Gold Noir Şişe Mum" />
+          </a>
+          <div class="caption">
+            <h3>Gold Noir</h3>
+            <p>Siyah dokuda altın detaylar, zarif bir siluet.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim" class="section">
+      <h2>İletişim</h2>
+      <p class="intro">Soruların ve siparişlerin için:</p>
+      <div class="socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://behance.net" target="_blank" rel="noopener">Behance</a>
+        <a href="mailto:hello@eureka.studio">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2025 Eureka Studio. Tüm hakları saklıdır.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
