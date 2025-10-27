@@ -193,4 +193,34 @@ footer {
   transform: scale(1.02);
 }
 
+/* ===== ÇALIŞMALAR: her yerde 2 sütun, çok küçük ekranda 1, masaüstünde 3 ===== */
+#projects .gallery-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 380px){        /* çok dar telefonlar */
+  #projects .gallery-grid{ grid-template-columns: 1fr; }
+}
+
+@media (min-width: 900px){        /* büyük ekranlar */
+  #projects .gallery-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+/* kart/görseller */
+#projects .gallery-grid img{
+  width: 100%;
+  aspect-ratio: 4 / 3;            /* düzgün kırpma */
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .25s ease;
+}
+#projects .gallery-grid img:hover{ transform: scale(1.02); }
+
 
