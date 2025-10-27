@@ -131,3 +131,32 @@ p  { font-size: clamp(16px, 2.7vw, 18px); line-height: 1.65; margin: 8px 0 16px;
 .menu {
   margin-left: 40px;              /* Menü yazıları biraz sağa gelsin */
 }
+
+/* 🌈 Özel buton hover efekti - Evreka Studio tarzı */
+button, 
+a.button, 
+.cta, 
+.btn, 
+button[type="button"], 
+button[type="submit"] {
+  background: linear-gradient(90deg, #ff7b00, #1e9bff);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Hover efekti */
+button:hover, 
+a.button:hover, 
+.cta:hover, 
+.btn:hover, 
+button[type="button"]:hover, 
+button[type="submit"]:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(255, 123, 0, 0.3), 0 8px 24px rgba(30, 155, 255, 0.3);
+  filter: brightness(1.1);
+}
