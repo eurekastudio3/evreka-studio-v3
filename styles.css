@@ -112,3 +112,22 @@ p  { font-size: clamp(16px, 2.7vw, 18px); line-height: 1.65; margin: 8px 0 16px;
   .menu { display: none; } /* basit: mobilde menüyü gizle (tek sayfa olduğu için sorun değil) */
   .hero { padding-top: 28px; }
 }
+
+/* Üstteki "Eureka Studio" yazısının konumunu ve boyutunu düzelt */
+.brand {
+  font-size: 24px !important;      /* Yazıyı büyütür */
+  font-weight: 800;
+  text-decoration: none;
+  color: #111 !important;
+  margin-left: 0 !important;       /* Tam sola yasla */
+  padding-left: 0 !important;
+  display: block;
+  text-align: left;                /* Sola hizala */
+}
+.nav {
+  justify-content: flex-start !important;  /* Menüleri soldan başlatır */
+  gap: 32px;                              /* Yazı ile menü arası boşluk */
+}
+.menu {
+  margin-left: 40px;              /* Menü yazıları biraz sağa gelsin */
+}
