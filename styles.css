@@ -1,52 +1,133 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo img {
+  height: 32px;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1rem;
+  margin: 10px 0 30px;
+  color: #555;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.primary {
+  background: linear-gradient(90deg, #ff6a00, #0055ff);
+  color: white;
+}
+.outline {
+  border: 2px solid #000;
+  color: #000;
+}
+
+/* Bölümler */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+p {
+  margin-bottom: 20px;
+}
+
+/* Çalışmalar */
 .gallery {
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  padding-top: 12px;
 }
-
-/* Kart yapısı */
 .card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform .25s ease;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
-
-/* Görsel alanı kare, taşma yok */
-.thumb {
-  position: relative;
+.card img {
   width: 100%;
-  padding-top: 100%; /* kare oran */
-  overflow: hidden;
-  background: #f8f8f8;
-}
-.thumb img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  display: block;
+}
+.card h3 {
+  margin: 12px 0 4px;
+  font-size: 1rem;
+}
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 14px;
 }
 
-/* Yazılar */
-.caption {
-  padding: 12px 14px 16px;
-  text-align: center;
+/* İletişim */
+.contact .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.caption h3 {
-  margin: 8px 0 4px;
-  font-size: 15px;
+.contact a {
+  color: #000;
   font-weight: 600;
-  color: #111;
+  text-decoration: none;
 }
-.caption p {
-  margin: 0;
-  font-size: 13px;
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
   color: #666;
+  border-top: 1px solid #eee;
 }
