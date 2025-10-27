@@ -1,63 +1,33 @@
-/* ======= ÇALIŞMALAR GALERİ (KARE VE ORTALANMIŞ) ======= */
+/* ======= ÇALIŞMALAR GALERİ (KARE, 2 SÜTUN) ======= */
+.section{max-width:1200px;margin:0 auto;padding:40px 16px;text-align:center}
+.section h2{font-size:32px;font-weight:700;margin:0 0 12px}
+.section p{color:#555;margin:0 0 28px}
 
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 16px;
-  text-align: center;
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr); /* telefonda da 2'li */
+  gap:16px;
+  justify-items:center;
 }
 
-.section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.square{
+  position:relative;
+  width:100%;
+  max-width:240px;
+  aspect-ratio:1/1;       /* kare */
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.square:hover{transform:scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.12)}
+
+.square img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover; display:block;
 }
 
-.section p {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 28px;
-}
-
-/* Galeri 2 sütun kare kutular */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  justify-items: center;
-}
-
-/* Kare görsel kabı */
-.square {
-  position: relative;
-  width: 100%;
-  max-width: 240px;
-  aspect-ratio: 1 / 1;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.square:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Görseller */
-.square img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Mobilde de iki sütun kalsın */
-@media (max-width: 640px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* daha geniş ekranlarda kareleri biraz büyüt */
+@media (min-width:768px){ .square{max-width:280px} }
