@@ -120,3 +120,41 @@ footer {
 .socials a:hover {
   color: #ff7b00;
 }
+
+/* 🔹 Galeri */
+.gallery {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* 🔸 Görsellerin düzeni */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobilde tek sütun */
+  gap: 25px;
+  padding: 0 40px;
+}
+
+/* Tablet ve üstü cihazlarda 2 sütun */
+@media (min-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
