@@ -1,162 +1,122 @@
-/* Basit reset */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+/* 🩶 Genel Ayarlar */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-  color: #111;                 /* TÜM METİNLER SİYAH */
-  background: #fff;            /* BEYAZ ZEMİN */
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Genel yardımcılar */
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* 🔹 Üst Kısım */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px;
 }
-.section { padding: 56px 0; }
-h1 { font-size: clamp(32px, 5vw, 56px); margin: 16px 0 8px; }
-h2 { font-size: clamp(24px, 3.6vw, 36px); margin: 0 0 12px; }
-p  { font-size: clamp(16px, 2.7vw, 18px); line-height: 1.65; margin: 8px 0 16px; }
-.muted { color: #555; }
 
-/* ÜST NAV */
-.site-header {
-  position: sticky; top: 0; z-index: 50;
-  background: #fff; border-bottom: 1px solid #eee;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand {
-  font-weight: 800; letter-spacing: .2px; text-decoration: none; color: #111;
-  font-size: 20px;
-}
-.menu a {
-  color: #111; text-decoration: none; margin-left: 20px; font-weight: 600;
-}
-.menu a:hover { text-decoration: underline; }
 
-/* HERO */
-.hero { padding: 40px 0 24px; text-align: center; }
-.hero-logo {
-  width: min(90vw, 680px);     /* mobilde taşmaz, büyük ekranda 680px'i geçmez */
+.logo-container img {
+  width: 55px;
   height: auto;
-  display: block;
-  margin: 0 auto 14px;
-  border-radius: 16px;         /* şık köşe */
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  object-fit: contain;         /* oran koru, yamulmasın */
+  object-fit: contain;
 }
-.hero-title { margin-top: 8px; }
-.lead { color: #444; }
 
-/* Butonlar */
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* 🔹 Kahraman Alanı */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Buton */
 .btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 10px;
-  border: 1px solid #111;
-  color: #111;
+  background: linear-gradient(90deg, #ff7b00, #009dff);
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  margin: 6px 8px 0;
-  transition: transform .15s ease, background .15s ease;
-  background: #fff;
-}
-.btn:hover { transform: translateY(-1px); background: #f7f7f7; }
-.btn.ghost { background: #fff; }
-
-/* Özellik listesi */
-.features { padding-left: 18px; }
-.features li { margin: 6px 0; }
-
-/* GALERİ */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  margin-top: 18px;
-}
-.gallery-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;         /* kare ve orantılı */
-  object-fit: cover;           /* taşma yok, kırp */
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.06);
-  background: #f5f5f5;         /* yüklenirken hoş dursun */
-}
-
-/* Sosyaller */
-.socials {
-  display: flex; flex-wrap: wrap; gap: 16px;
-}
-.socials a {
-  color: #111; text-decoration: none; font-weight: 600;
-  border-bottom: 2px solid transparent; padding-bottom: 2px;
-}
-.socials a:hover { border-color: #111; }
-
-/* Alt bilgi */
-.site-footer {
-  border-top: 1px solid #eee;
-  padding: 22px 0;
-  color: #555;
-  font-size: 14px;
-  margin-top: 32px;
-}
-
-/* Küçük ekran iyileştirmeleri */
-@media (max-width: 520px) {
-  .menu { display: none; } /* basit: mobilde menüyü gizle (tek sayfa olduğu için sorun değil) */
-  .hero { padding-top: 28px; }
-}
-
-/* Üstteki "Eureka Studio" yazısının konumunu ve boyutunu düzelt */
-.brand {
-  font-size: 24px !important;      /* Yazıyı büyütür */
-  font-weight: 800;
-  text-decoration: none;
-  color: #111 !important;
-  margin-left: 0 !important;       /* Tam sola yasla */
-  padding-left: 0 !important;
-  display: block;
-  text-align: left;                /* Sola hizala */
-}
-.nav {
-  justify-content: flex-start !important;  /* Menüleri soldan başlatır */
-  gap: 32px;                              /* Yazı ile menü arası boşluk */
-}
-.menu {
-  margin-left: 40px;              /* Menü yazıları biraz sağa gelsin */
-}
-
-/* 🌈 Özel buton hover efekti - Evreka Studio tarzı */
-button, 
-a.button, 
-.cta, 
-.btn, 
-button[type="button"], 
-button[type="submit"] {
-  background: linear-gradient(90deg, #ff7b00, #1e9bff);
-  color: white;
-  border: none;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Hover efekti */
-button:hover, 
-a.button:hover, 
-.cta:hover, 
-.btn:hover, 
-button[type="button"]:hover, 
-button[type="submit"]:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 24px rgba(255, 123, 0, 0.3), 0 8px 24px rgba(30, 155, 255, 0.3);
-  filter: brightness(1.1);
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.3),
+              0 6px 20px rgba(0, 157, 255, 0.3);
+}
+
+/* 🔹 Galeri */
+.gallery {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Alt Bilgi */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  background-color: #f7f7f7;
+  margin-top: 40px;
+}
+
+.socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  color: #ff7b00;
 }
