@@ -250,4 +250,23 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
+   
+}
+/* Üst logo yazısını SİYAH yap (sadece header içindeki marka linki) */
+header .logo a,
+header .site-title a,
+header .brand a {
+  color: #000 !important;
+  background: transparent !important;
+  -webkit-text-fill-color: #000 !important;
+  text-decoration: none !important;
+  font-weight: 700;
+}
+
+/* Logonun altındaki büyük başlığı SİYAH yap */
+.hero h1,
+.hero .title {
+  color: #000 !important;
+  background: transparent !important;
+  -webkit-text-fill-color: #000 !important;
 }
