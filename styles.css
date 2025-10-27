@@ -1,127 +1,86 @@
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  color: #222;
-  background: #fff;
-  line-height: 1.6;
+:root{
+  --bg:#f3f2ef;         /* hafif açık bej/gri */
+  --card:#ffffff;
+  --text:#222;
+  --muted:#6b7280;
+  --ring:0 8px 22px rgba(0,0,0,.08);
+  --radius:18px;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo img { height: 32px; }
-.navbar nav a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 16px;
-  font-weight: 500;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 80px 20px 60px;
+/* Üst bar */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:14px 18px;
+  background:rgba(243,242,239,.7);
+  backdrop-filter:saturate(120%) blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.06);
 }
-.hero h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-.hero p {
-  font-size: 1rem;
-  margin: 10px 0 30px;
-  color: #555;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-.btn {
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.primary {
-  background: linear-gradient(90deg, #ff6a00, #0055ff);
-  color: white;
-}
-.outline {
-  border: 2px solid #000;
-  color: #000;
-}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit}
+.brand__logo{width:36px; height:36px; object-fit:contain; border-radius:6px}
+.brand__text{font-size:20px; font-weight:700; letter-spacing:.2px}
+.nav{display:flex; gap:20px}
+.nav a{color:var(--text); text-decoration:none; font-weight:600; opacity:.9}
+.nav a:hover{opacity:1}
 
 /* Bölümler */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
-p { margin-bottom: 20px; }
+.section{max-width:1100px; margin:56px auto; padding:0 18px}
+.section h2{font-size:34px; margin:0 0 10px}
+.lead{font-size:18px; color:var(--muted); margin:10px 0 18px}
+.bullets{margin:0; padding-left:20px}
 
-/* Çalışmalar */
-.gallery {
-  display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+/* Galeri 2 sütun (mobilde de 2) */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:22px;
+  margin-top:22px;
 }
-.card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform .25s ease;
-}
-.card:hover { transform: translateY(-4px); }
-.card img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-}
-.card h3 {
-  margin: 12px 0 4px;
-  font-size: 1rem;
-}
-.card p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 14px;
+@media (min-width:900px){
+  .gallery{grid-template-columns:repeat(3, 1fr)}
 }
 
-/* İletişim */
-.contact .links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Kartlar */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--ring);
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
 }
-.contact a {
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
+.card:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.10)}
+.card img{
+  width:100%;
+  aspect-ratio:1/1;       /* KARE */
+  object-fit:cover;
+  display:block;
 }
+.card figcaption{padding:14px 14px 16px}
+.card h3{margin:0 0 6px; font-size:18px}
+.card p{margin:0; color:var(--muted); font-size:15px; line-height:1.45}
+
+/* Linkler */
+.links{display:flex; gap:20px; flex-wrap:wrap}
+.links a{font-weight:700; color:var(--text); text-decoration:none; border-bottom:2px solid rgba(0,0,0,.12); padding-bottom:2px}
+.links a:hover{border-bottom-color:rgba(0,0,0,.3)}
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  color: #666;
-  border-top: 1px solid #eee;
+.site-footer{
+  text-align:center; color:#7b7f87;
+  padding:28px 12px 40px;
 }
+
+/* Zarif fade-in */
+.reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease}
+.reveal.is-visible{opacity:1; transform:none}
